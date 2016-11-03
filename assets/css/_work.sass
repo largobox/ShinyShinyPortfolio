@@ -1,0 +1,52 @@
+.work_cnt
+	background: $bgcolor
+
+.work_inner_cnt
+	max-width: 960px
+	margin: 0px auto
+	padding-bottom: 100px
+	+clearfix()
+
+	.work_el
+		display: block
+		width: 25%
+		padding-top: 16%
+		float: left
+		position: relative
+		overflow: hidden
+
+		background:
+			position: center center
+			repeat: no-repeat
+			size: cover
+
+		@media screen and (max-width: 760px)
+			width: 50%
+			padding-top: 26%
+
+		.work_load
+			text-align: center
+			+position(absolute, 0px,0px, null,0px)
+			height: 100%
+			background: fade-out($color_h, 0.12) 
+			display: flex
+			align-items: center
+			justify-content: center
+			transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+
+			strong
+				display: block
+				padding: 0px 20px
+				color: #fafafa
+				font-weight: normal
+				text-transform: uppercase
+				font-size: 24px
+
+		&:hover .work_load
+			@extend %anim
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+<section class="work_cnt">
+	<h3 id="work">Work</h3>
+	<div class="work_inner_cnt">
+		
+    {% for project in site.data.base_data.projects %}
+
+			{% if {{project.folder}} != 'coming_soon' %}
+				<a href="" class="work_el" style = "background-image: url(/assets/img/works/{{project.folder}}/thumb.jpg);">
+					<div class="work_load">
+						<strong>{{ project.name }}</strong>
+						<div class="zoom_icon"></div>
+					</div>
+				</a>
+			{% else %}
+				<a href="" class="work_el" style = "background-image: url(/assets/img/coming_soon.jpg);">
+					<div class="work_load">
+						<strong>{{ project.name }}</strong>
+						<div class="zoom_icon"></div>
+					</div>
+				</a>		
+			{% endif %}	
+
+    {% endfor %}
+
+	</div>
+</section>

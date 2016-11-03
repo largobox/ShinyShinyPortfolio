@@ -1,0 +1,18 @@
+skills:
+- {name: Planning, value: '7'}
+- {name: Communication, value: '5'}
+- {name: Learning, value: '9'}
+- {name: Visual Design, value: '5'}
+- {name: UX Design, value: '8'}
+- {name: Programming, value: '6'}
+
+projects:
+- {name: ShinyShiny Portfolio, folder: proj_0}
+- {name: Look, folder: coming_soon}
+- {name: Think, folder: coming_soon}
+- {name: And contact me, folder: coming_soon}
+- {name: I`m willing, folder: coming_soon}
+- {name: to offer you, folder: coming_soon}
+- {name: some gift, folder: coming_soon}
+- {name: just contact me, folder: coming_soon}
+
