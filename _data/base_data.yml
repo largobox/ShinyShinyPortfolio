@@ -16,3 +16,8 @@ projects:
 - {name: some gift, folder: coming_soon}
 - {name: just contact me, folder: coming_soon}
 
+clients:
+- {avatar: man_1.png, logo: logo_1.png, name: Alfred Pennyworth, title: Fictional person, content: "In the near feature there will be comments of amazing people"}
+- {avatar: man_3.png, logo: logo_2.png, name: Bruce Banner, title: Fictional person, content: "In the near feature there will be comments of amazing people"}
+- {avatar: man_2.png, logo: logo_3.png, name: Hank Pym, title: Fictional person, content: "In the near feature there will be comments of amazing people"}
+- {avatar: man_4.png, logo: logo_4.png, name: Reed Richards, title: Fictional person, content: "In the near feature there will be comments of amazing people"}
