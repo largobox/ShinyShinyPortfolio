@@ -1,20 +1,19 @@
 header
-	height: 480px
-	background: url(../img/zakat-doroga-dom.jpg) center center
-	background-size: cover
-	background-repeat: no-repeat
+	background:
+		repeat: no-repeat, no-repeat
+		size: 50px 50px, cover
+		blend-mode: overlay, normal
+		position: 30px 20px, 50% 50%
+		image: url(../img/logo.svg), url(../img/zabor-gory-peyzazh.jpg)
+	padding-bottom: 50px
 
 	.logo
-		height: 50px
-		width: 50px
+		+size(50px)
 		float: left
-		opacity: 0.35
 		margin: 10px 0 0 30px
 
-		svg
-			background: rgb(250,250,250)
-			border-radius: 50px
-			padding: 3px
+		path
+			fill: rgba(0,0,0,0.4)
 
 	nav
 		float: right

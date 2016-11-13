@@ -1,41 +1,31 @@
 footer
-	background: url(../img/zakat-doroga-dom.jpg) center center
-	background-size: cover
-	
+	background:
+		repeat: no-repeat, no-repeat
+		size: 50px 50px, cover
+		blend-mode: overlay, normal
+		position: 30px 20px, 50% 50%
+		image: url(../img/logo.svg), url(../img/zabor-gory-peyzazh.jpg)
+	padding-bottom: 50px
 
 	.lockup
 		padding: 50px 30px
 		+clearfix
 
-		.logo
-			height: 50px
-			width: 50px
-			float: left
-			opacity: 0.35
-			margin-right: 30px
-
-			svg
-				background: rgb(250,250,250)
-				border-radius: 50px
-				padding: 3px
-		
 		.content_wrap
 			float: left
+			margin-left: 80px
 
-			.copyright
-				margin: 0
-				text-transform: uppercase
-				font-size: 12px
-				color: rgba(250,250,250,0.4)
-		nav
-			color: rgba(250,250,250,1)
+		.copyright
+			margin: 0
+			text-transform: uppercase
+			font-size: 12px
+			color: rgba(250,250,250,0.4)
 
-			a
-				@extend %small-bold	
+		a
+			@extend %small-bold
+			color: rgba(250,250,250,0.5)
+			display: inline-block
+			margin-right: 30px
+
+			&:hover
 				color: rgba(250,250,250,0.7)
-				margin-right: 15px
-
-				&:hover
-					color: rgba(250,250,250,1)
-		
-
