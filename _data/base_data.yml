@@ -1,3 +1,7 @@
+settings:
+email: 'sergey.event@gmail.com'
+
+
 skills:
 - {name: Planning, value: '7'}
 - {name: Communication, value: '5'}
