@@ -3,7 +3,34 @@ $(function() {
 	workBelt();
 	workLoad();
 	clientSelector();
+	toggleMobileMenu();
+	listenOutsideClick();
 });
+
+function listenOutsideClick (){
+	$(document).mouseup(function (e){	
+	  var c = $(".mobile_nav");
+
+	  if (!c.is(e.target)){
+	    c.removeClass('mobile_nav_visible');
+	  }
+	});
+}
+
+function toggleMobileMenu (){
+	$('.mobile_menu').click(function(){
+
+		var mobNav = $('.mobile_nav');
+
+		if ( mobNav.hasClass('mobile_nav_visible') ) {
+			mobNav.removeClass('mobile_nav_visible');
+		}
+		else {
+			mobNav.addClass('mobile_nav_visible');
+		}
+
+	});
+}
 
 function smoothScroll (duration) {
 	$('a[href^="#"]').on('click', function(event) {
@@ -55,8 +82,10 @@ function clientSelector(){
 
 	$('.client_el').first().addClass('active_client');
 	$('.client_logo').first().addClass('active_logo');
+	$('.clients_mobile_nav span').first().addClass('active_logo');
 
-	$('.client_logo').click(function(){
+
+	$('.client_logo, .clients_mobile_nav span').click(function(){
 		var $this = $(this),
 				$siblings = $this.parent().children(),
 				position = $siblings.index($this);

@@ -45,3 +45,52 @@ header
 		letter-spacing: 0.05em
 		color: #fafafa
 		line-height: 1
+
+	.std_nav
+
+	.mobile_menu
+		+size(40px)
+		float: right
+		padding: 20px
+		display: none
+
+		path
+			fill: rgba(250,250,250, 0.85)
+
+	.mobile_nav
+		position: relative
+		left: 90px
+		top: 50px
+		opacity: 0
+		transition: 0.3s
+
+		&.mobile_nav_visible
+			opacity: 1
+
+		a
+			display: block
+			margin-bottom: 6px
+			border-bottom: 1px solid #fafafa
+
+
+@media (max-width: 750px)
+	
+	header
+		
+		.std_nav
+			display: none
+
+		.mobile_menu
+			display: block
+
+		.mobile_nav
+			display: block
+
+		h1
+			font-size: 46px
+
+			span
+				border: #fafafa solid 5px
+
+		p
+			font-size: 14px

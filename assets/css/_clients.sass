@@ -6,10 +6,11 @@
 	position: relative
 
 	.client_el
-		max-width: 700px
-		margin: 0px 0px 50px -375px
+		max-width: 750px
+		margin: 50px auto
 		display: none
-		+position(absolute, 0px, null, null, 50%)
+		position: relative
+		z-index: 1
 
 		&.active_client
 			display: flex
@@ -20,6 +21,7 @@
 
 			img
 				max-width: 80px
+				max-height: 80px
 				border-radius: 50%
 
 			text-align: center
@@ -35,6 +37,7 @@
 				color: #919191
 
 		.client_content
+			padding: 0px 20px
 			font-size: 18px
 			line-height: 32px
 			font-weight: 300
@@ -43,38 +46,40 @@
 .clients_logo
 	position: relative
 	max-width: 750px
-	margin: 300px auto 100px
+	margin: 50px auto 100px
 	display: flex
 	justify-content: space-around
+	z-index: 1
 	
 	.client_logo
-		height: 80px
-		min-width: 200px
-		background:
-			size: contain
-			repeat: no-repeat
-			position: center
 		cursor: pointer
 		margin: 0 20px
 		transition: .3s
+		border-bottom: 4px solid transparent
+		opacity: .5
+		padding-bottom: 12px
 
 	.active_logo
-		box-shadow: 0px 3px 0px $color_h
+		border-bottom: 4px solid $color_h
+		opacity: 1
 
 .client_quote_mark
 	+position(absolute, -5px, null, null, -15px)
 	+size(60px)
 	z-index: -1
-	opacity: .25
+	opacity: .2
 	
 	path
 		fill: $color_h
 
 .client_controls
 	+position(absolute, 0px, 0px, 0px, 0px)
+	z-index: 1
 
 	svg
 		+size(40px)
+		path
+			fill: $color_h
 
 	div
 		+size(40px)
@@ -85,6 +90,52 @@
 
 	.client_control_prev
 		+position(absolute, 50%, null, null, 10px)
+
+// Clients mobile navigation
+
+.clients_mobile_nav
+	text-align: center
+	display: none
+
+	span
+		cursor: pointer
+		display: inline-block
+		+size(20px)
+		border-radius: 50%
+		border: solid 2px $bgcolor
+		margin: 0px 10px
+
+		&.active_logo
+			border-color: $color_h
+
+@media (max-width: 750px)
+	
+	.clients_mobile_nav
+		display: block
+
+	.client_controls
+		display: none
+
+	.clients_belt
+
+		.client_el.active_client
+			display: block
+			position: relative
+			left: auto
+			margin-left: 0
+
+			.client_pic
+				margin-bottom: 20px
+
+			.client_content
+				text-align: center
+
+			.client_quote_mark
+				left: 0px
+				top: -20px
+
+	.clients_logo
+		display: none
 
 
 
