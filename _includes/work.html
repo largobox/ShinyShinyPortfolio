@@ -8,9 +8,9 @@
 			<div class="work_inner_cnt">	
 		    {% for project in site.data.base_data.projects %}
 					{% if {{project.folder}} != 'coming_soon' %}
-						<div class="work_el" data-folder="{{project.folder}}" style = "background-image: url(/assets/img/works/{{project.folder}}/thumb.jpg);">
+						<div class="work_el" data-folder="{{project.folder}}" style = "background-image: url(assets/img/works/{{project.folder}}/thumb.jpg);">
 					{% else %}
-						<div class="work_el" data-folder="{{project.folder}}" style = "background-image: url(/assets/img/coming_soon.jpg);">
+						<div class="work_el" data-folder="{{project.folder}}" style = "background-image: url(assets/img/coming_soon.jpg);">
 					{% endif %}	
 							<div class="work_load">
 								<strong>{{ project.name }}</strong>
